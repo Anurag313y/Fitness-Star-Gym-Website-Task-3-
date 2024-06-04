@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Fitness Gym</title>
+  <link href="images/fitness_logo.png" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <section class="navigation">
+        <!-- Hamberger start -->
+        <input type="checkbox" name="" id="check">
+
+        <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+        <ul class="Hamburger-nav">
+          <li class="Hamburger-home"><a href="../Home/index.html">Home</a></li>
+          <li><a href="../Classes/index.html">Classes</a></li>
+          <li><a href="../Products/index.html">Products</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><button type="button" class="join-btn" id="joinUsBtn" onclick="openRegisterForm()">Join Us</button></li>
+
+        </ul>
+        <!-- hamberger end -->
+        <div class="nav-container">
+
+          <div class="brand">
+            <a href="#"><img src="../images/logo.png" alt="Fitness Star Gym"></a>
+          </div>
+          <nav>
+            <ul class="nav-list">
+              <li ><a href="../Home/index.html">Home</a></li>
+              <li><a href="../Classes/index.html">Classes</a></li>
+              <li><a href="../Products/index.html">Products</a></li>
+              <li class="home-btn"><a href="#">Blogs</a></li>
+              <li><button type="button" class="join-btn" id="joinUsBtn" onclick="openRegisterForm()">Join Us</button>
+              </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </section>
+
+    </header>
+
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeRegisterForm()">&times;</span>
+      <form id="joinForm" onsubmit="handleFormSubmit(event)">
+        <div id="registerForm">
+          <h2 style="background-color:rgba(141, 131, 131, 1);">SUBSCRIPTION PLAN</h2>
+          <label for="fullname">Full Name:</label>
+          <input class="form-input" type="text" name="fullname" id="fullname" placeholder=" Enter Your Name" required />
+
+          <label for="email">Email:</label>
+          <input class="form-input" type="email" name="email" id="email" placeholder=" xxxxx@gmail.com" required />
+
+          <label for="mobile">Mobile Number:</label>
+          <input class="form-input" type="text" name="mobile" id="mobile" placeholder="xxxxxxxxxx" required />
+
+          <legend>Duration:</legend>
+          <label class="duration">
+            <input type="radio" name="duration" value="monthly" /> Monthly
+            <input type="radio" name="duration" value="yearly" style="margin-left: 22px;" /> Yearly
+          </label>
+
+          <legend>Mode Of Payment:</legend>
+          <label class="payment">
+            <input type="radio" name="payment" value="cash" /> Cash
+            <input type="radio" name="payment" value="online" style="margin-left: 45px;" /> Online
+          </label>
+
+          <legend class="personal-training">Personal Training: <b>*free with yearly plan</b></legend>
+          <label class="training">
+            <input type="radio" name="personal-training" value="required" /> Required
+            <br>
+            <input type="radio" name="personal-training" value="not-required" /> Not required
+          </label>
+
+          <label for="sign-me" class="sign-me">
+            <input type="checkbox" name="sign-me" value="sign-me" checked>
+            I accept all terms and conditions provided in this form.
+          </label>
+
+          <button onclick="submitForm()">BUY PLAN</button>
+          <button onclick="closeRegisterForm()">CLOSE</button>
+        </div>
+      </form>
+    </div>
+    <div class="main-content">
+      <div class="hero-section">
+        <img src="../images/yoga-class.png" alt="Yoga Class" />
+        <div class="hero-text">
+          <h1>Unlocking Inner Radiance Through Yoga at Star Fitness Gym</h1>
+          <p>
+            Welcome to Star Fitness Gym, where we're not just sculpting
+            bodies; we're nurturing spirits. As we embark on this journey of
+            wellness, we're delighted to introduce the ancient art of yoga
+            into our fitness haven. Picture yourself on a mat, surrounded by a
+            serene atmosphere, guided by expert instructors dedicated to your
+            holistic well-being. At Star Fitness Gym, yoga is not just a
+            workout; it's a transformative experience. From powerful Vinyasa
+            flows to restorative Yin sessions, our classes cater to all
+            levels, inviting you to explore the profound connection between
+            mind and body. As our gym website takes shape, get ready to
+            explore the diverse world of yoga we have curated just for you.
+            Elevate your fitness journey at Star Fitness Gym - where radiant
+            health and inner peace converge. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Doloribus architecto quae molestiae
+            voluptatum, tenetur quod ab tempora nisi consequuntur eum ad
+            cupiditate eligendi voluptas reprehenderit laboriosam nihil
+            inventore esse quis est tempore! Consectetur temporibus quam nisi
+            dolorum ex iure laudantium impedit, at dolore deserunt veritatis
+            laboriosam ut praesentium consequatur? Velit vero distinctio
+            cumque fuga sunt soluta deserunt aspernatur tenetur fugiat
+            mollitia ad, assumenda est? Iste repudiandae accusamus sint fugit
+            minima, quae dolorem! Sequi esse, ducimus dolorem sunt maxime
+            voluptatum minima quia commodi. Magni optio architecto, laudantium
+            voluptatibus debitis voluptatem, non doloribus corrupti
+            consequatur delectus error deleniti hic ut. Excepturi, cum.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefits-section">
+        <div class="benefits-text">
+          <h2>Benefits of a Healthy Diet</h2>
+          <ul>
+            <li>May help you live longer.</li>
+            <li>Keeps skin, teeth, and eyes healthy.</li>
+            <li>Supports muscles.</li>
+            <li>Boosts immunity.</li>
+            <li>Strengthens bones.</li>
+            <li>Supports healthy pregnancies and breastfeeding.</li>
+            <li>Helps the digestive system function.</li>
+          </ul>
+        </div>
+        <img src="../images/healthy-food.png" alt="Healthy Food" />
+      </div>
+
+      <div class="commitment-section">
+        <div class="commitment-text">
+          <h2>Our Commitment to Fitness</h2>
+          <p>
+            As we lay the foundations of Star Fitness Gym, we are committed to
+            offering a comprehensive approach to fitness, and yoga plays a
+            pivotal role in this pursuit. Our gym is not just a space for
+            physical transformation; it's a sanctuary for finding balance in
+            every aspect of your life. The upcoming Star Fitness Gym website
+            will be your gateway to a world of yoga classes designed to meet
+            the diverse needs of our members. From enhancing flexibility and
+            building strength to promoting mental clarity and stress
+            reduction, our yoga sessions embrace the full spectrum of
+            well-being. Join us on this journey of self-discovery and let the
+            ancient practice of yoga be your compass towards a healthier, more
+            balanced life. Star Fitness Gym - where fitness is a harmonious
+            blend of strength and serenity.
+            Welcome to Star Fitness Gym, where we're not just sculpting
+            bodies; we're nurturing spirits. As we embark on this journey of
+            wellness, we're delighted to introduce the ancient art of yoga
+            into our fitness haven. Picture yourself on a mat, surrounded by a
+            serene atmosphere, guided by expert instructors dedicated to your
+            holistic well-being.Iste repudiandae accusamus sint fugit
+            minima, quae dolorem! Sequi esse, ducimus dolorem sunt maxime
+            voluptatum minima quia commodi. Magni optio architecto, laudantium
+            voluptatibus debitis voluptatem, non doloribus corrupti
+            consequatur delectus error deleniti hic ut. Excepturi, cum.
+            Sequi esse, ducimus dolorem sunt maxime
+            voluptatum minima quia commodi. Magni optio architecto, laudantium
+            voluptatibus debitis voluptatem, non doloribus corrupti
+            consequatur delectus error deleniti hic ut. Excepturi, cum.
+            Sequi esse, ducimus dolorem sunt maxime
+            voluptatum minima quia commodi. Magni optio architecto, laudantium
+            voluptatibus debitis voluptatem, non doloribus corrupti
+            consequatur delectus error deleniti hic ut. Excepturi, cum.
+          </p>
+        </div>
+        <img
+          src="../images/fitness_commitment.png"
+          alt="Fitness Commitment"
+        />
+      </div>
+    </div>
+    <!-- footer start -->
+    <footer class="footer">
+      <div class="foot-container">
+        <div class="foot-logo">
+          <img src="../images/logo.png" alt="Logo of Fitness Star Gym">
+          <h3>Prioritize Your Fitness Goals
+            with our world class services</h3>
+        </div>
+        <div class="company foot-card">
+          <h3>COMPANY</h3>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="../Blogs/index.html">Blogs</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="contact foot-card">
+          <h3>CONTACT</h3>
+          <ul>
+            <li><a href="#">Help/FAQs</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Mobile</a></li>
+          </ul>
+        </div>
+        <div class="more foot-card">
+          <h3>MORE</h3>
+          <ul>
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Plans</a></li>
+            <li><a href="#">Method</a></li>
+          </ul>
+        </div>
+        <div class="foot-tags foot-card">
+          <h3 id="popular-tag">Popular Tags</h3>
+          <div class="tags">
+            <button type="button" class="tags-btn-color1">ABS</button>
+            <button type="button" class="tags-btn-color1">Workout</button>
+
+            <button type="button" class="tags-btn-color2">Nutrition</button>
+            <button type="button" class="tags-btn-color1">Fitness</button>
+
+            <button type="button" class="tags-btn-color1">Boxing</button>
+            <button type="button" class="tags-btn-color2">Trainers</button>
+
+            <button type="button" class="tags-btn-color2">Facilities</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer ends -->
+    <div class="footer-bottom">
+      <h3>CopyRight All Rights Reserved</h3>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

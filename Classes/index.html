@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Fitness Gym</title>
+  <link href="images/fitness_logo.png" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <section class="navigation">
+        <!-- Hamberger start -->
+        <input type="checkbox" name="" id="check">
+
+        <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+        <ul class="Hamburger-nav">
+          <li class="Hamburger-home"><a href="../Home/index.html">Home</a></li>
+          <li><a href="#">Classes</a></li>
+          <li><a href="../Products/index.html">Products</a></li>
+          <li><a href="../Blogs/index.html">Blogs</a></li>
+          <li><button type="button" class="join-btn" id="joinUsBtn" onclick="openRegisterForm()">Join Us</button></li>
+
+        </ul>
+        <!-- hamberger end -->
+        <div class="nav-container">
+
+          <div class="brand">
+            <a href="#"><img src="../images/logo.png" alt="Fitness Star Gym"></a>
+          </div>
+          <nav>
+            <ul class="nav-list">
+              <li ><a href="../Home/index.html">Home</a></li>
+              <li class="home-btn"><a href="#">Classes</a></li>
+              <li><a href="../Products/index.html">Products</a></li>
+              <li><a href="../Blogs/index.html">Blogs</a></li>
+              <li><button type="button" class="join-btn" id="joinUsBtn" onclick="openRegisterForm()">Join Us</button>
+              </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </section>
+
+    </header>
+
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeRegisterForm()">&times;</span>
+      <form id="joinForm" onsubmit="handleFormSubmit(event)">
+        <div id="registerForm">
+          <h2 style="background-color:rgba(141, 131, 131, 1);">SUBSCRIPTION PLAN</h2>
+          <label for="fullname">Full Name:</label>
+          <input class="form-input" type="text" name="fullname" id="fullname" placeholder=" Enter Your Name" required />
+
+          <label for="email">Email:</label>
+          <input class="form-input" type="email" name="email" id="email" placeholder=" xxxxx@gmail.com" required />
+
+          <label for="mobile">Mobile Number:</label>
+          <input class="form-input" type="text" name="mobile" id="mobile" placeholder="xxxxxxxxxx" required />
+
+          <legend>Duration:</legend>
+          <label class="duration">
+            <input type="radio" name="duration" value="monthly" /> Monthly
+            <input type="radio" name="duration" value="yearly" style="margin-left: 22px;" /> Yearly
+          </label>
+
+          <legend>Mode Of Payment:</legend>
+          <label class="payment">
+            <input type="radio" name="payment" value="cash" /> Cash
+            <input type="radio" name="payment" value="online" style="margin-left: 45px;" /> Online
+          </label>
+
+          <legend class="personal-training">Personal Training: <b>*free with yearly plan</b></legend>
+          <label class="training">
+            <input type="radio" name="personal-training" value="required" /> Required
+            <br>
+            <input type="radio" name="personal-training" value="not-required" /> Not required
+          </label>
+
+          <label for="sign-me" class="sign-me">
+            <input type="checkbox" name="sign-me" value="sign-me" checked>
+            I accept all terms and conditions provided in this form.
+          </label>
+
+          <button onclick="submitForm()">BUY PLAN</button>
+          <button onclick="closeRegisterForm()">CLOSE</button>
+        </div>
+      </form>
+
+      
+    </div>
+    <div class="class-main-content">
+      <div class="class-hero-image">
+        <h1>Our Classes</h1>
+        <div class="class-card-container">
+          <div class="class-hero-card">
+            <img src="../images/PowerExcello.png" alt="Image of Power Excello">
+            <h4>6:30 - 7:30 AM</h4>
+            <button class="class-hero-btn" type="button">Power Excello</button >
+          </div>
+  
+          <div class="class-hero-card">
+            <img src="../images/Mixed-Level-Excello.png" alt="Image of Mixed-Level Excello">
+            <h4>6:30 - 7:30 AM</h4>
+            <button class="class-hero-btn" type="button">Mixed-Level Excello</button >
+          </div>
+  
+          <div class="class-hero-card">
+            <img src="../images/Beginner-Level.png" alt="Image of Beginner Level Excello">
+            <h4>6:30 - 7:30 AM</h4>
+            <button class="class-hero-btn" type="button">Beginner Level</button >
+          </div>
+        </div>
+      </div>
+   <section class="training-partners">
+        <div class="training-partner-part1">
+          <h1>Our Training Partners</h1>
+        </div>
+        <div class="training-partner-part2"></div>
+        
+        <div class="training-partner-container">
+          <div class="training-partner-card">
+            <img src="../images/John-Smith.png" alt="Image of Our Training Partner John Smith">
+            <button class="training-partner-btn" type="button">John Smith</button >
+          </div>
+  
+          <div class="training-partner-card">
+            <img src="../images/Anais-Louis.png" alt="Image of Our Training Partner Anais Louis">
+            <button class="training-partner-btn" type="button">Anais Louis</button >
+          </div>
+  
+          <div class="training-partner-card">
+            <img src="../images/Phil-heath.png" alt="Image of Our Training Partner  Phil heath">
+            <button class="training-partner-btn" type="button"> Phil heath</button >
+          </div>
+        </div>
+      </section>
+  
+      <div class="image-carousel">
+        <img id="img" src="../images/classes-two-girl.png"/>
+        <div class="play-overlay" onclick="startTimer()"></div>
+      </div>
+    </div>
+    <!-- footer start -->
+    <footer class="footer">
+      <div class="foot-container">
+        <div class="foot-logo">
+          <img src="../images/logo.png" alt="Logo of Fitness Star Gym">
+          <h3>Prioritize Your Fitness Goals
+            with our world class services</h3>
+        </div>
+        <div class="company foot-card">
+          <h3>COMPANY</h3>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="../Blogs/index.html">Blogs</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="contact foot-card">
+          <h3>CONTACT</h3>
+          <ul>
+            <li><a href="#">Help/FAQs</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Mobile</a></li>
+          </ul>
+        </div>
+        <div class="more foot-card">
+          <h3>MORE</h3>
+          <ul>
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Plans</a></li>
+            <li><a href="#">Method</a></li>
+          </ul>
+        </div>
+        <div class="foot-tags foot-card">
+          <h3 id="popular-tag">Popular Tags</h3>
+          <div class="tags">
+            <button type="button" class="tags-btn-color1">ABS</button>
+            <button type="button" class="tags-btn-color1">Workout</button>
+
+            <button type="button" class="tags-btn-color2">Nutrition</button>
+            <button type="button" class="tags-btn-color1">Fitness</button>
+
+            <button type="button" class="tags-btn-color1">Boxing</button>
+            <button type="button" class="tags-btn-color2">Trainers</button>
+
+            <button type="button" class="tags-btn-color2">Facilities</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer ends -->
+    <div class="footer-bottom">
+      <h3>CopyRight All Rights Reserved</h3>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

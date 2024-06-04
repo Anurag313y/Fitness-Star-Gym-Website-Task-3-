@@ -1,0 +1,1076 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .navigation {
+    position: fixed;
+    z-index: 1000;
+    display: grid;
+    justify-content: flex-end;
+    width: 100%;
+    height: 10vh;
+    padding: 0% 1%;
+    background-color: #524d4d;
+  }
+  
+  .brand img {
+    position: absolute;
+    width: 20%;
+    height: 150%;
+    left: 0.001%;
+    float: left;
+  }
+  nav {
+    float: right;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    float: left;
+    position: relative;
+    font-size: 120%
+  }
+  nav ul li a,
+  nav ul li a:visited {
+    display: block;
+    padding: 0 1rem;
+    line-height: 2.5rem;
+    margin-top: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul .home-btn a {
+    border-bottom: 5px solid #ffa500;
+    border-radius: 2px;
+  }
+  
+  nav ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    overflow: auto;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: transparent;
+    transition: width 0.3s ease;
+  }
+  nav ul li a:hover:after {
+    width: 80%;
+    margin-left: 10px;
+    background-color: #ffa500;
+    border-radius: 4px;
+  }
+  nav ul .home-btn a:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    overflow: auto;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: transparent;
+    transition: width 0.3s ease;
+  }
+  nav ul .home-btn a:hover:after {
+    width: 80%;
+    margin-left: 10px;
+    background-color: #524d4d;
+    border-radius: 4px;
+  }
+  
+  li button {
+    padding: 10px 20px;
+    background-color: #ffa500;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    margin: 18px 65px 18px 28px;
+  }
+  li button:hover {
+    cursor: pointer;
+    background-color: #d78c02;
+  }
+  
+  #registerForm {
+  
+    position: fixed;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #face7b;
+    color: #000000;
+    font-weight: 700;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: left;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .sign-me {
+    font-size: 16px;
+  }
+  #registerForm h2 {
+    text-align: center;
+    padding: 0.4rem;
+    margin-bottom: 20px;
+  }
+  #registerForm label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  #registerForm input {
+    padding: 3px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  .form-input {
+    background-color: #d9d9d9;
+    width: 100%;
+    border: 1px outset black;
+  }
+  
+  #registerForm button {
+    background-color: #46a04f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  #registerForm button:hover {
+    background-color: #2c7d34;
+  }
+  #registerForm button:last-child {
+    background-color: #8b4513;
+  }
+  #registerForm button:last-child:hover {
+    background-color: #a0522d;
+  }
+  
+  
+  .footer {
+    background-color: #524d4d;
+  }
+  .foot-card {
+    margin: 10px;
+    padding: 10px 1px;
+    line-height: 3rem;
+  }
+  .company {
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 0px;
+    padding: 0px;
+  }
+  .foot-card h3 {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  #popular-tag {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 120;
+  }
+  .foot-card ul li {
+    list-style-type: none;
+  }
+  .foot-card ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+  }
+  .foot-card ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffa500;
+    border-radius: 5px;
+    transition: width 0.2s ease-in-out;
+  }
+  .foot-card ul li a:hover::before {
+    width: 103%;
+  }
+  .foot-tags h3 {
+    text-decoration: underline 2px #ffa500;
+    color: #ffa500;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .tags-btn-color1 {
+    padding: 9px 30px;
+    border: none;
+    margin: 5px 10px 5px 0px;
+  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    background-color: #8d8383;
+    color: #ffffff;
+  }
+  .tags-btn-color1:hover {
+    cursor: pointer;
+    background-color: #686161;
+    color: #ffffff;
+    transition: background-color 0.3s;
+  }
+  .tags-btn-color2 {
+    padding: 9px 30px;
+    margin: 5px 10px 5px 0px;
+    border: none;
+  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #ffa500;
+  }
+  .tags-btn-color2:hover {
+    cursor: pointer;
+    background-color: #cf8702;
+    color: #ffffff;
+    transition: background-color 0.3s;
+  }
+  
+  .footer-bottom {
+    width: 100%;
+    line-height: 50px;
+    display: grid;
+    justify-content: center;
+    word-spacing: 0.3rem;
+    background-color: #ffa500;
+  }
+  
+  
+  /*****************************Desktop view*******************************/
+  @media only screen and (min-width: 1282px) {
+   
+    /* Hamburger start */
+    #check{
+      display: none;
+    }
+    #checkbtn{
+      /* display: none; */
+      display: none;
+      float: right;
+    }
+    .Hamburger-nav{
+       list-style-type: none;
+       color: white;
+       text-decoration: none;
+       display: none;
+    }
+    
+    /* Hamburger end */
+  
+    .foot-container {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1fr 1fr 2.5fr;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: #ffffff;
+      padding: 15px 50px 15px 50px;
+    }
+    .foot-logo {
+      width: 405px;
+      padding-top: 3rem;
+      padding-left: 50px;
+    }
+    .foot-logo img {
+      width: 100%;
+      height: 100px;
+      position: relative;
+      margin-bottom: 5px;
+    }
+    .foot-logo h3 {
+      word-wrap: break-word;
+      color: #ffa500;
+      font-size: 24px;
+    }
+
+    .nutrition-supplement{
+  background-image: url(../images/neutrition-suppliment.png);
+  width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.nutrition-supplement-box h2{
+  font-size: 4rem;
+  font-weight: 500;
+  margin-top: -10%;
+}
+
+.nutrition-supplement .product {
+    display: inline-block;
+    
+    text-align: center;
+}
+
+.nutrition-supplement img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin:0rem 3rem ;
+margin-left:30% ;
+
+    margin-top: 1rem;
+}
+
+.nutrition-supplement button {
+   
+    display: block;
+  
+    margin-left:30%;
+    margin-top: 1rem;
+    background-color: #f39c12; 
+    padding: 15px 35px; 
+    font-size: 18px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+  
+}
+
+.weights-machine{
+  width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.weights-machine-box h2{
+  font-size: 4rem;
+  font-weight: 500;
+  margin-top: -10%;
+}
+
+.weights-machine .product {
+    display: inline-block;
+    
+    text-align: center;
+}
+
+.weights-machine img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin:0rem 3rem ;
+margin-left:30% ;
+
+    margin-top: 1rem;
+}
+
+.weights-machine button {
+   
+    display: block;
+  
+    margin-left:30%;
+    margin-top: 1rem;
+    background-color: #f39c12; 
+    padding: 15px 35px; 
+    font-size: 18px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+  
+}
+
+.apparel-merchandise{
+  background-image: url(../images/product-banner.png);
+  width: 100%;
+    height: 110vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.apparel-merchandise-box h2{
+  font-size: 4rem;
+  font-weight: 500;
+  margin-top: -10%;
+}
+
+.apparel-merchandise .product {
+    display: inline-block;
+    
+    text-align: center;
+}
+
+.apparel-merchandise img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin:0rem 3rem ;
+margin-left:30% ;
+
+    margin-top: 1rem;
+}
+
+.apparel-merchandise button {
+   
+    display: block;
+  
+    margin-left:40%;
+    margin-top: 1rem;
+    background-color: #f39c12; 
+    padding: 15px 35px; 
+    font-size: 18px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+  
+}
+}
+  
+  
+  /*****************************Tablet view*******************************/
+  @media screen and (max-width: 1282px) and (min-width: 768px) {
+    
+   
+    #check{
+      display: none;
+    }
+    #checkbtn{
+      /* display: none; */
+      display: none;
+      float: right;
+    }
+    .Hamburger-nav{
+       list-style-type: none;
+       color: white;
+       text-decoration: none;
+       display: none;
+    }
+    
+  /* footer start */
+    .foot-container {
+      padding-bottom: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      color: #ffffff;
+    }
+    .foot-logo {
+      width: 90%;
+      height: auto;
+      margin: 25px auto;
+      text-align: center;
+    }
+    .foot-logo img {
+      position: relative;
+      width: 480px;
+      height: 80px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .foot-logo h3 {
+      word-wrap: break-word;
+      color: #ffa500;
+      font-size: 24px;
+      text-align: center;
+    }
+    .foot-card {
+      margin: 0px;
+      padding: 5px 25px;
+      line-height: 2rem;
+      text-align: center;
+    }
+    .foot-card h3 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+    .foot-card ul li a {
+      font-size: 22px;
+      line-height: 3rem;
+    }
+    .foot-tags h3 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  
+    .tags-btn-color1,
+    .tags-btn-color2 {
+      padding: 7px 20px;
+      margin: 5px 5px 5px 0;
+      font-size: 18px;
+    }
+
+   /* bbbb */
+   .nutrition-supplement{
+    background-image: url(../images/neutrition-suppliment.png);
+    width: 100%;
+      height: 130vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+     
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      position: relative;
+  }
+  .nutrition-supplement-box h2{
+    font-size: 4rem;
+    font-weight: 500;
+    /* margin-top: 10%; */
+    /* transform: translateY(-140%); */
+  }
+  
+  .nutrition-supplement .product {
+      display: inline-block;
+      
+      text-align: center;
+  }
+  
+  .nutrition-supplement img {
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+      /* margin:0rem 3rem ; */
+  margin-left:30% ;
+  /* transform: translateY(-50%); */
+  
+      margin-top: 1rem;
+  }
+  
+  .nutrition-supplement button {
+     
+      display: block;
+    
+      margin-left:30%;
+      margin-top: 1rem;
+      background-color: #f39c12; 
+      padding: 15px 35px; 
+      font-size: 18px;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+    
+  }
+  
+  .weights-machine{
+    width: 100%;
+      height:120vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+     
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      position: relative;
+  }
+  .weights-machine-box h2{
+    font-size: 4rem;
+    font-weight: 500;
+    /* margin-top: 10%; */
+    /* transform: translateY(-20%); */
+  }
+  
+  .weights-machine .product {
+      display: inline-block;
+      
+      text-align: center;
+  }
+  
+  .weights-machine img {
+      width: 70%;
+      height: 70%;
+      object-fit: cover;
+      /* margin:0rem 3rem ; */
+  /* margin-left:10% ; */
+  
+      margin-top: 1rem;
+  }
+  
+  .weights-machine button {
+     
+      display: block;
+    
+      margin-left:30%;
+      margin-top: 1rem;
+      background-color: #f39c12; 
+      padding: 5% 15%; 
+      font-size: 80%;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+    
+  }
+  
+  .apparel-merchandise{
+    background-image: url(../images/product-banner.png);
+    width: 100%;
+      height: 110vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+     
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      position: relative;
+  }
+  .apparel-merchandise-box h2{
+    font-size: 4rem;
+    font-weight: 500;
+    margin-top: 10%;
+  }
+  
+  .apparel-merchandise .product {
+      display: inline-block;
+      
+      text-align: center;
+  }
+  
+  .apparel-merchandise img {
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+      /* margin:0rem 3rem ; */
+  margin-left:30% ;
+  
+      margin-top: 1rem;
+  }
+  
+  .apparel-merchandise button {
+     
+      display: block;
+    
+      margin-left:40%;
+      margin-top: 1rem;
+      background-color: #f39c12; 
+      padding: 15px 35px; 
+      font-size: 18px;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+    
+  }
+   
+  }
+  
+  
+  
+  /*****************************Mobile view*******************************/
+  @media screen and (max-width: 768px) {
+    .nav-container .brand{
+     width: 50%;
+   margin-top: -4rem;  
+  }
+  
+  /* Hamburger start */
+    #check{
+      display: none;
+    }
+    #check:checked ~ul{
+      left:0;
+    }
+    #checkbtn{
+      display: block; 
+      line-height:10vh;
+    color: white;  
+    margin-right: 3rem; 
+  }
+    #joinUsBtn{
+      margin-left: 4rem;
+    }
+    .Hamburger-nav li button {
+    
+      background-color: #ffa500;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 18px 65px 18px 28px;
+    }
+    .Hamburger-nav {
+      position: absolute;  
+      top: 10vh;
+      left: -200%;
+      transition: .5s;
+      padding-left: 35.5%;
+      padding-right: 35.5%;
+      list-style-type: none;
+      text-decoration: none;
+      background-color: #2f2c2c;
+     flex-direction: column;
+     display: flex;
+     align-items: center;
+     justify-items: center;
+    
+    }
+    .Hamburger-nav a{
+      color: white;
+      text-decoration: none;
+      line-height: 3rem;
+      
+    }
+     .Hamburger-home {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     }
+   /* Hamburger end */
+  
+   .nav-list{
+  display: none;
+   }
+  /* footer start */
+  .footer{
+    width: 100%;
+  }
+  .foot-container {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #ffffff;
+  }
+  .foot-logo {
+    width: 90%;
+    height: auto;
+    margin: 25px auto;
+    text-align: center;
+  }
+  .foot-logo img {
+    position: relative;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .foot-logo h3 {
+    word-wrap: break-word;
+    color: #ffa500;
+    font-size: 24px;
+    text-align: center;
+  }
+  .foot-card {
+    margin: 0px;
+    padding: 5px 25px;
+    line-height: 2rem;
+    text-align: center;
+  }
+  .foot-card h3 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+  .foot-card ul li a {
+    font-size: 22px;
+    line-height: 3rem;
+  }
+  .foot-tags h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .tags-btn-color1,
+  .tags-btn-color2 {
+    padding: 7px 20px;
+    margin: 5px 5px 5px 0;
+    font-size: 18px;
+  }
+  .footer-bottom{
+  width: 100%;
+  }
+
+  /* body */
+  .nutrition-supplement{
+    background-image: url(../images/neutrition-suppliment.png);
+    width: 100%;
+    /* transform: scale(1.4); */
+      height: 180vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+     /* flex-wrap: wrap; */
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      position: relative;
+  }
+  .nutrition-supplement-box h2{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 8%;
+  }
+  
+  .product {
+      display: block;
+      /* margin: 3rem; */
+      text-align: center;
+      justify-content: center;
+  }
+  
+  .product img {
+      width: 37%;
+      height: 37%;
+      object-fit: cover;
+      /* margin:0rem 4rem ; */
+      margin-top: 1rem;
+  }
+  
+  .nutrition-supplement button {
+     
+      display: block;
+      margin: 0rem 9rem;
+      margin-top: 1rem;
+      transform: translateX(10%);
+      background-color: #f39c12; 
+      padding: 5% 7%; 
+      font-size: 90%;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      /* transition: background-color 0.3s ease;  */
+  }
+
+  /* bbbbb */
+  .weights-machine{
+ width: 100%;
+ height: 200%;
+  }
+  .weights-machine img{
+    height: 40%;
+    width: 40%;
+    }
+    .weights-machine button{
+      display: block;
+      /* margin: 0rem 9rem; */
+      margin-left: 32%;
+      margin-top: 1rem;
+      /* transform: translateX(10%); */
+      background-color: #f39c12; 
+      padding: 5% 7%; 
+      font-size: 90%;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+    
+  }
+    #weights-machine-h2{
+      font-size: 3rem;
+      font-weight: 500;
+      margin-top: 2rem;
+    }
+    .apparel-merchandise{
+      background-image: url(../images/product-banner.png);
+      width: 100%;
+        height: 200vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+    #apparel-merchandise-button{
+      display: block;
+        margin: 0rem 9rem;
+        margin-top: 1rem;
+        background-color: #f39c12; 
+        
+        padding: 15px 58px; 
+        font-size: 18px;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+    }
+    .apparel-merchandise-box-box img{
+      height: 70%;
+    }
+  
+}
+
+  /* xxxxxxxxxxxxxxxxxxxx */
+  
+  section {
+    padding: 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+/* .nutrition-supplement{
+  background-image: url(../images/neutrition-suppliment.png);
+  width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.nutrition-supplement-box h2{
+  font-size: 4rem;
+  font-weight: 500;
+  margin-top: 5rem;
+}
+
+.product {
+    display: inline-block;
+    
+    text-align: center;
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin:0rem 9rem ;
+    margin-top: 1rem;
+}
+
+.product button {
+   
+    display: block;
+    margin: 0rem 9rem;
+    margin-top: 1rem;
+    background-color: #f39c12; 
+    padding: 15px 35px; 
+    font-size: 18px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+  
+}
+
+.weights-machine img{
+height: 70%;
+}
+#weights-machine-h2{
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+.apparel-merchandise{
+  background-image: url(../images/product-banner.png);
+  width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#apparel-merchandise-button{
+  display: block;
+    margin: 0rem 9rem;
+    margin-top: 1rem;
+    background-color: #f39c12; 
+    
+    padding: 15px 58px; 
+    font-size: 18px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.apparel-merchandise-box-box img{
+  height: 70%;
+}
+    
+    
+  
+  
+    */
+ 
